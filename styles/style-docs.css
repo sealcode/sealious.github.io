@@ -149,3 +149,55 @@ p {
     border-radius: 0.1rem;
     transition: background-color 200ms;
 }
+
+/*------------------ FOOTER PAGE ----------------------*/
+
+footer {
+    position: relative;
+    height: auto;
+    background-color: hsl(195, 14%, 90%);
+    color: #637c84;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow: auto;
+}
+
+.footer-left {
+    float: left;
+}
+
+.footer-right {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: #637c84;
+}
+
+.wrapper {
+    position: relative;
+    display: block;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+hr {
+    height: 4rem;
+    background: url(../img/seal.svg) no-repeat 50% 50%;
+    margin-top: 1rem;
+    border: 0;
+}
+.center {
+    text-align: center;
+    width: 100%;
+}
+.half{
+    width: 50%;
+}

@@ -27,6 +27,13 @@
         padding-right: 0;
     }
 
+    footer {
+        width: 100%;
+        line-height: 160%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
     .wrapper {
         max-width: 100%;
         padding-left: 1rem;
@@ -49,6 +56,12 @@
     .title-description {}
     h1 {
         font-size: 4.6rem;
+    }
+
+    .footer-left,
+    .footer-right {
+        float: none;
+        text-align: center;
     }
 }
 
@@ -73,6 +86,10 @@
     h1 {
         font-size: 4.4rem;
     }
+    footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 @media all and (max-width: 30em) {
@@ -93,6 +110,10 @@
     h1 {
         font-size: 4rem;
     }
+    footer {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 }
 
 @media all and (max-width: 22.5em) {
@@ -112,6 +133,10 @@
     }
     h1 {
         font-size: 3.6rem;
+    }
+    footer {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
