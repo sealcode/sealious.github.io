@@ -49,6 +49,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../img/background.jpg);
+    text-align: center;
 }
 
 .title {
@@ -173,7 +174,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: #637c84;
+    /*color: #637c84;*/
 }
 
 .wrapper {
