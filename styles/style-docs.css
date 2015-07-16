@@ -40,6 +40,15 @@ header {
     color: #FFF;
 }
 
+/*------------------ NO JAVASCRIPT ----------------------*/
+.noscriptmsg{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 3px;
+}
+
+
 
 /*------------------ FIRST PAGE ----------------------*/
 
