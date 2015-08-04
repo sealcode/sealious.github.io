@@ -10,6 +10,12 @@
     margin: 0 auto;
 }
 
+.wrapper-header{   
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+
 body {
     font-family: 'SourceSansProLight';
     color: rgb(34, 54, 77);
@@ -138,6 +144,10 @@ p {
     background-color: hsl(128, 53%, 36%);
     /*border-radius: 0.1rem;*/
     transition: background-color 200ms;
+    color: #FFF;
+}
+
+a {
 }
 /*------------------ FEATURES PAGE ----------------------*/
 
@@ -197,7 +207,7 @@ footer {
 
 @media all and (min-width: 60.75em) and (max-width: 68.75em) {s
     header,
-    .wrapper {
+    .wrapper, .wrapper-header {
         max-width: none;
         padding-left: 4rem;
         padding-right: 4rem;
@@ -237,14 +247,12 @@ footer {
     }
     .wrapper {
         max-width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     footer {
         width: 100%;
         line-height: 160%;
-        padding-left: 3rem;
-        padding-right: 3rem;
     }
     .col-img {
         background: url(../img/fishes.svg) no-repeat 50% 50%;
@@ -369,7 +377,7 @@ footer {
     max-width: none;
 }
 
-.content > h1,
+/*.content > h1,
 .content > h2,
 .content > h3,
 .content > h4,
@@ -382,4 +390,4 @@ footer {
     font-size: 2.2rem;
     letter-spacing: 0rem;
     line-height: 4rem;
-}
+}*/
