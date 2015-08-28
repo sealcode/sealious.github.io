@@ -161,7 +161,8 @@ header {
 footer {
     position: relative;
     height: auto;
-    background-color: hsl(195, 14%, 90%);
+    background-color: #F7F7F7;
+    border-top: 0.1rem solid #E2E7E9;
     color: #637c84;
     margin-top: 4rem;
     padding-top: 2rem;
