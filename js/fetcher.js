@@ -34,6 +34,9 @@ var fetcher = new function() {
     	document.getElementById('fetcher_output').innerHTML = output;
     };
 
+    this.getTags = function () {
+    	//https://github.com/Sealious/sealious.github.io/
+    };
 
     //test for marked
     console.log(marked('I am using __markdown__.'));
