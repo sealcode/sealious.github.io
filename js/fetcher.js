@@ -1,45 +1,57 @@
 var fetcher = new function() {
 
     var output = "";
-    var url_to_file = "https://raw.githubusercontent.com/Sealious/Sealious/dev/docs/reference.md";
+    var url_to_choosen_documentation = "https://raw.githubusercontent.com/Sealious/Sealious/"
+    var url_to_documentation = "https://raw.githubusercontent.com/Sealious/Sealious/dev/docs/reference.md";
+    var url_to_tags = "https://api.github.com/repos/Sealious/Sealious/tags";
+    var tags = {};
+    var tag_list = [];
 
-    this.getMarkdownFile = function() {
+    this.getData = function(callback, data) {
         var request = new XMLHttpRequest();
-        
+
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) { //ready
-                this.parseMarkdownToHtml(request.responseText);
+                callback(request.responseText);
             }
-        }.bind(this);
-        request.open("GET", url_to_file, true);
+        };
+        request.open("GET", data, true);
         request.send(null);
     };
 
-    this.parseMarkdownToHtml = function (response) {
+
+    this.getDocumentation = function() {
+        fetcher.getData(fetcher.parseMarkdownToHtml, url_to_documentation);
+    }
+
+    this.getTags = function() {
+        fetcher.getData(function(response) {
+                tags = JSON.parse(response) //save tags from github api
+
+                for (var key in tags) {
+                  if( tags.hasOwnProperty( key ) ) {
+                    tag_list.push(tags[key].name);
+                  } 
+                }
+            },
+            url_to_tags);
+    };
+
+    this.parseMarkdownToHtml = function(response) {
         var parsed_markdown = marked(response);
         output = parsed_markdown;
     };
 
-    // this.checkOutput = function () {
-    // 	console.log(output);
-    // }.bind(this)
-
-    this.changeUrlToMarkdown = function (argument) {
-    	// replace url for fetchnig other version of markdown
+    this.changeUrlToMarkdown = function(index) {
+        var link = url_to_choosen_documentation + tag_list[index] + "/docs/reference.md";
+        console.log(link); 
     };
 
-    this.injectContentToHtml = function () {
-    	// search node in html
-    	// inject content
-    	document.getElementById('fetcher_output').innerHTML = output;
+    this.showAllTags = function () {
+        console.log(tag_list);  
     };
 
-    this.getTags = function () {
-    	//https://github.com/Sealious/sealious.github.io/
+    this.injectContentToHtml = function() {
+        document.getElementById('fetcher_output').innerHTML = output;
     };
-
-    //test for marked
-    console.log(marked('I am using __markdown__.'));
-
-
 }
