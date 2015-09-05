@@ -7,6 +7,7 @@ var fetcher = new function() {
     var tags = {};
     var tag_list = [];
     var minor_tag_list = [];
+    var error = "<h4>No documentation for the selected version</h4>";
     // marked.setOptions({
     //   highlight: function (code) {
     //     return require('highlight.js').highlightAuto(code).value;
@@ -20,9 +21,9 @@ var fetcher = new function() {
             if (request.readyState == 4 && request.status == 200) { //ready
                 callback(request.responseText);
             } else {
-
+                this.injectContentToHtml(error);
             }
-        };
+        }.bind(this);
         request.open("GET", data, true);
         request.send(null);
     };
@@ -41,17 +42,21 @@ var fetcher = new function() {
                     }
                 };
 
-                var current_minor_version = 0;
+                var choosen_minor_version = 0;
 
                 tag_list.map(function(element) {
-                    if (current_minor_version !== element[3]) {
-                        minor_tag_list.push(element)
-                    } else {
-                        console.log("the same minor");
-                    }
-                    current_minor_version = element[3]
+                    var sub = element.substr(element.indexOf(".") + 1);
+                    current_minor_version = parseInt(sub.substr(0, sub.indexOf(".")));
 
-                })
+                    if (choosen_minor_version !== current_minor_version) {
+                        minor_tag_list.push(element)
+                    }
+                    // } else {
+                    //     console.log("the same minor");
+                    // }
+                    choosen_minor_version = current_minor_version;
+
+                });
                 this.createSelectDiv();
             }.bind(this),
             url_to_tags);
@@ -60,24 +65,15 @@ var fetcher = new function() {
     this.parseMarkdownToHtml = function(response) {
         var parsed_markdown = marked(response);
         output = parsed_markdown;
-        this.injectContentToHtml();
+        this.injectContentToHtml(output);
 
     };
 
-    // this.changeUrlToMarkdown = function(index) {
-    //     var link = url_to_choosen_documentation + tag_list[index] + "/docs/reference.md";
-    //     console.log(link);
-    // };
-
-    this.showAllTags = function() {
-        console.log(tag_list);
-        console.log(minor_tag_list);
-    };
 
     // ---------------------------------------------------------------------------
     // functions for view
 
-    this.injectContentToHtml = function() {
+    this.injectContentToHtml = function(output) {
         document.getElementById('fetcher-output').innerHTML = output;
     };
 
@@ -104,5 +100,8 @@ var fetcher = new function() {
             option.text = array[i];
             selectList.appendChild(option);
         }
+        this.getSelectedDocs();
     }
-}
+};
+
+fetcher.getTags();
