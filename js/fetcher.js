@@ -1,13 +1,13 @@
 var fetcher = new function() {
-    
+
     var minor_tag_list = [];
     var error = "<h4>No documentation for the selected version</h4>";
     var self = this;
-    
+
     marked.setOptions({
-      highlight: function (code) {
-        return hljs.highlightAuto(code).value;
-      }
+        highlight: function(code) {
+            return hljs.highlightAuto(code).value;
+        }
     });
 
     this.getData = function(callback, data) {
@@ -16,8 +16,10 @@ var fetcher = new function() {
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) { //ready
                 callback(request.responseText);
+                view.createTableOfContents();
             } else {
                 view.injectContentToHtml(error);
+                view.createTableOfContents();
             }
         };
         request.open("GET", data, true);
@@ -36,7 +38,7 @@ var fetcher = new function() {
                 var tag_list = [];
                 var sub = "";
                 var choosen_minor_version = 0;
-                
+
                 tags = JSON.parse(response); //save tags from github api
 
                 for (var key in tags) {

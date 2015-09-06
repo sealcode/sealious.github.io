@@ -14,7 +14,7 @@ var view = new function() {
     };
 
     this.createSelectDiv = function() {
-        var select_div = document.getElementById("select-div");
+        var select_div = document.querySelector("#select-div");
         var array = fetcher.returnMinorTags();
 
         var selectList = document.createElement("select");
@@ -30,4 +30,9 @@ var view = new function() {
         }
         fetcher.getSelectedDocs();
     };
+
+        this.createTableOfContents = function () {
+            $(function(){ $("#toc").tableOfContents(); })
+        };
 };
+
