@@ -1,6 +1,7 @@
 var view = new function() {
 
     var output = "";
+    var self = this;
 
     this.injectContentToHtml = function(output) {
         document.getElementById('fetcher-output').innerHTML = output;
@@ -9,8 +10,8 @@ var view = new function() {
     this.parseMarkdownToHtml = function(response) {
         var parsed_markdown = marked(response);
         output = parsed_markdown;
-        this.injectContentToHtml(output);
-    }.bind(this);
+        self.injectContentToHtml(output);
+    };
 
     this.createSelectDiv = function() {
         var select_div = document.getElementById("select-div");
@@ -28,5 +29,5 @@ var view = new function() {
             selectList.appendChild(option);
         }
         fetcher.getSelectedDocs();
-    }.bind(this);
+    };
 };
