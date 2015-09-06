@@ -31,8 +31,9 @@ var view = new function() {
         fetcher.getSelectedDocs();
     };
 
-        this.createTableOfContents = function () {
-            $(function(){ $("#toc").tableOfContents(); })
-        };
+    this.createTableOfContents = function () {
+        $(function(){ 
+            $("#toc").tableOfContents(); 
+        });
+    };
 };
-

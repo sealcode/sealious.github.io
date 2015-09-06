@@ -51,8 +51,8 @@ var fetcher = new function() {
                     sub = element.substr(element.indexOf(".") + 1);
                     current_minor_version = parseInt(sub.substr(0, sub.indexOf(".")));
 
-                    if (choosen_minor_version !== current_minor_version) {
-                        minor_tag_list.push(element);
+                    if (choosen_minor_version !== current_minor_version && current_minor_version > 4) {
+                        minor_tag_list.push(element); //push all docs 0.5+
                     }
 
                     choosen_minor_version = current_minor_version;

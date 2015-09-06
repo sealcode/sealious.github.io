@@ -35,6 +35,21 @@ header {
     color: #FFF;
 }
 
+#sidebar{
+    height: 100%;
+    width: 14rem;
+    float: left;
+    padding: 1rem;
+    position: fixed;
+}
+
+#main{
+    height: 100%;
+    /*width: 100%;*/
+    padding-left: 14rem;
+    max-width: 60rem;
+}
+
 /*------------------ FIRST PAGE ----------------------*/
 
 .page-header {
@@ -360,10 +375,6 @@ footer {
 }
 
 /* flatdoc fixes */
-
-.menubar{
-    display: none;
-}
 
 .content-root{
     padding-left: 0rem;
