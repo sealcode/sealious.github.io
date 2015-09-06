@@ -26,7 +26,7 @@ h1 {
 }
 
 nav {
-    height: 10rem;
+    height: 1rem;
     /* font-size: 1.2rem; */
 }
 
@@ -39,7 +39,7 @@ header {
 
 .page-header {
     position: relative;
-    height: 75vh;
+    height: 25vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../img/background.jpg);
@@ -48,9 +48,9 @@ header {
 
 .title {
     position: relative;
-    font-size: 6rem;
+    font-size: 4rem;
     font-family: 'Lato Regular';
-    line-height: 6rem;
+    line-height: 4rem;
 }
 
 .title-description {

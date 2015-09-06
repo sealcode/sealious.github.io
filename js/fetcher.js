@@ -2,11 +2,13 @@ var fetcher = new function() {
     
     var minor_tag_list = [];
     var error = "<h4>No documentation for the selected version</h4>";
-    // marked.setOptions({
-    //   highlight: function (code) {
-    //     return require('highlight.js').highlightAuto(code).value;
-    //   }
-    // });
+    var self = this;
+    
+    marked.setOptions({
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
 
     this.getData = function(callback, data) {
         var request = new XMLHttpRequest();
@@ -17,21 +19,22 @@ var fetcher = new function() {
             } else {
                 view.injectContentToHtml(error);
             }
-        }.bind(this);
+        };
         request.open("GET", data, true);
         request.send(null);
     };
 
     this.getDocumentation = function(link) {
-        this.getData(view.parseMarkdownToHtml, link);
-    }.bind(this);
+        self.getData(view.parseMarkdownToHtml, link);
+    };
 
     this.getTags = function() {
         var url_to_tags = "https://api.github.com/repos/Sealious/Sealious/tags";
 
-        this.getData(function(response) {
+        self.getData(function(response) {
                 var tags = {};
                 var tag_list = [];
+                var sub = "";
                 var choosen_minor_version = 0;
                 
                 tags = JSON.parse(response); //save tags from github api
@@ -43,7 +46,7 @@ var fetcher = new function() {
                 }
 
                 tag_list.map(function(element) {
-                    var sub = element.substr(element.indexOf(".") + 1);
+                    sub = element.substr(element.indexOf(".") + 1);
                     current_minor_version = parseInt(sub.substr(0, sub.indexOf(".")));
 
                     if (choosen_minor_version !== current_minor_version) {
@@ -55,7 +58,7 @@ var fetcher = new function() {
                 view.createSelectDiv();
             },
             url_to_tags);
-    }.bind(this);
+    };
 
     this.returnMinorTags = function() {
         return minor_tag_list;
@@ -65,8 +68,8 @@ var fetcher = new function() {
         var url_to_choosen_documentation = "https://raw.githubusercontent.com/Sealious/Sealious/";
         var selected_version = document.getElementById("docs-version").value;
         var link = url_to_choosen_documentation + selected_version + "/docs/reference.md";
-        this.getDocumentation(link);
-    }.bind(this);
+        self.getDocumentation(link);
+    };
 
 };
 //init page

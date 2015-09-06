@@ -12,27 +12,35 @@
     <meta content="Sealious" property="og:title">
     <meta content="Sealious is an application-development framework. It can be used to create a web application (with the help of sealious-www-server module), as well as a desktop app (in conjunction with NW.js or Electron)." name="description">
     <!-- styles -->
-    <link href='https://sealious.github.io/flatdoc-sealious-theme/style.css' type="text/css" rel='stylesheet'>
-    <link href="styles/utils.css" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' type="text/css" href='https://sealious.github.io/flatdoc-sealious-theme/style.css'  >
+    <link rel="stylesheet" type="text/css" href="styles/utils.css">
+
+    <!-- css solarized light for highlight.js -->
+    <link rel="stylesheet" type="text/css" href="js/lib/styles/solarized_light.css">
     <link href="img/seal.svg" rel="shortcut icon" type="image/x-icon">
 </head>
 
-<body role='flatdoc'>
+<body>
     <div class="page-header">
-        <div class="wrapper-header">
-            <header>
-                <nav></nav>
-                <div class="title">Sealious</div>
-                <div class="title-description">
-                    <span class="npm-install-sealious">$ npm install sealious</span>
-                    <span class="install-prompt" id="blink">_</span>
-                </div>
-                <!--                 <a href="docs.html" class="button">Docs</a>
-                <a href="http://github.com/Sealious/Sealious/releases" class="button">Download</a>
-                <a href="http://github.com/sealious/Sealious" class="button">View on GitHub</a> -->
-            </header>
+        <header>
+            <nav></nav>
+<!--             <div class="title">Sealious</div>
+            <div class="title-description">
+                <span class="npm-install-sealious">Documentation</span>
+                <span class="install-prompt" id="blink">_</span>
+            </div> -->
+        </header>
+    </div>
+    <div class="wrapper">
+        <div class="content">
+            <h1 class="come">Fetcher</h1>
+            <div id="menubar-fixed">menu</div>
+            <div id="select-div">Select version </div>
+            <div id="fetcher-output"></div>
         </div>
     </div>
+    
+
     <noscript>
         <style type="text/css">
         .right,
@@ -46,19 +54,11 @@
             <hr>
         </div>
     </noscript>
-    <div class="wrapper">
-        <div class="content">
-            <h1 class="come">Fetcher</h1>
-            <div id="select-div">
-                
-            </div>
-            <div id="fetcher-output"></div>
-        </div>
-    </div>
 </body>
 
     <!-- js -->
     <script src="js/lib/marked.js"></script>
+    <script src="js/lib/highlight.pack.js"></script>
     <script src="js/view.js"></script>
     <script src="js/fetcher.js"></script>
 </html>
