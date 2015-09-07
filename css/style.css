@@ -1,0 +1,380 @@
+/*--------------------- 0. Includes ---------------------------------*/
+/*--------------------- 1. Navigation ---------------------------------*/
+/*--------------------- 2. Page Start ---------------------------------*/
+/*--------------------- 3. Page Why -----------------------------------*/
+/*--------------------- 4. Page Code ----------------------------------*/
+/*--------------------- 5. Page We ------------------------------------*/
+/*--------------------- 6. Page Social --------------------------------*/
+/*--------------------- 7. Footer -------------------------------------*/
+
+/*----------------------- Includes ------------------------------*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*-----------------------------------------------------*/
+
+body {
+    font-family: 'SourceSansProLight';
+    color:white;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: 'SourceSansProLight';
+    font-weight: normal;
+}
+/*----------------- 1. Navigation ------------------------------------*/
+#navigation {
+    position:fixed;
+    z-index:1;
+    width: 100%;
+    color: #29303F;
+    background-color:white;
+    height:4rem;
+    border-bottom: 0.1rem solid #29303F;  
+}
+
+#navigation-special-width {
+    max-width:60rem;
+    margin: 0 auto;
+}
+
+#navigation ul {
+    float: right;
+    margin-top:1.3rem;
+    margin-right:5rem;
+}
+
+#navigation ul li{
+    list-style: none;
+    display: inline;
+}
+
+#navigation-logo{
+    margin-top:1rem;
+    margin-left:5rem;
+    height:2rem;
+    float:left;
+}
+
+#navigation-logo-text {
+    font-family: 'nerislight';
+    font-size:1rem;
+    padding-top:1.3rem;
+    padding-left:0.2rem;
+    float:left;
+    color: #29303F;
+}
+
+.navigation-links{
+    padding:0.5rem 1rem;
+}
+
+.navigation-links:visited, .navigation-links:active, .navigation-links:link{
+    text-decoration:none;
+    color:#29303F;
+}
+
+.navigation-links:hover{
+    text-decoration:none;
+    background: #29303F;
+    color:white;
+}
+
+/*--------------------- 2. Page Start --------------------------------*/
+#page-start{
+    height:30rem;
+    width: 100%;
+    background-image:
+        linear-gradient(
+        to top left,
+        #4D394B, #29303F
+        );
+    text-align:center;
+}
+
+#page-start img{
+    margin-top:10rem;
+    margin-bottom:0.5rem;
+}
+
+
+#page-start h3{
+    text-align:center;
+    width:70%;
+    margin:0 auto;
+    font-weight:normal;
+}
+
+#page-start h1{
+    padding-bottom:3rem;
+}
+
+#blink {
+    -webkit-animation: blink 1s linear infinite;
+    -moz-animation: blink 1s linear infinite;
+    -ms-animation: blink 1s linear infinite;
+    -o-animation: blink 1s linear infinite;
+    animation: blink 1s linear infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    50.01% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@-moz-keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    50.01% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@-ms-keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    50.01% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@-o-keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    50.01% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    50.01% {opacity: 0;}
+    100% {opacity: 0;}
+}
+/*--------------------- 3. Page Why -----------------------------------*/
+#container2{
+    background-color:white;
+    height:auto;
+}
+
+#page-why{
+    height:67rem;
+    width:48rem;
+    color:#29303F;
+    margin:0 auto;
+}
+
+#page-why h1{
+   font-family: 'SourceSansProLight';
+   font-weight:normal;
+   text-align:center;
+   padding-top:6rem;
+   padding-bottom:4rem;
+}
+
+#sealious-advantages{
+    width:48rem;
+    height:auto;
+    background-color:blue;
+}
+
+.sealious-advantage-image {
+    float:left;
+    width:12rem;
+    height:10rem;
+    margin: 1.5rem 0;
+}
+
+.sealious-advantage-image img{
+    padding:1rem;
+}
+
+.sealious-advantage-definition{
+    width:36rem;
+    height:10rem;
+    float:left;
+    margin: 1.5rem 0;
+    text-align:center;
+}
+
+.sealious-advantage-definition h2{
+    font-family: 'SourceSansProLight';
+    font-weight:normal;
+    padding:0.7rem 0rem;
+}
+
+.sealious-advantage-definition:nth-child(odd){
+    padding-right:2rem;
+}
+
+/*--------------------- 4. Page Code ----------------------------------*/
+#container3{
+    background-color:#394359;
+}
+
+#page-code{
+    height:45rem;
+    width:60rem;
+    margin:0 auto;
+}
+
+#page-code h1{
+    font-family: 'SourceSansProLight';
+    font-weight:normal;
+    text-align:center;
+    padding-top:6rem;
+    padding-bottom:6rem;
+}
+
+#sealious-code-place{
+    width:40rem;
+    height:26rem;
+    float:left;
+}
+
+#sealious-code-definition{
+    width:20rem;
+    height:26rem;
+    float:left;
+    text-align: justify;
+}
+
+#sealious-code-definition p{
+    padding:0rem 2rem;
+}
+
+#sealious-code-definition h1{
+    padding:2rem 0rem;
+}
+
+#sealious-code-place-folder{
+    width:35rem;
+    height:24rem;
+    background-color: #F5FFFA;
+    border-radius: 0.3rem;
+    margin:1rem auto;
+}
+
+#sealious-code-place-folder p{
+    width:100%;
+}
+
+/*--------------------- 5. Page We ------------------------------------*/
+#container4{
+    background-color: #7c94a1;
+}
+#page-we{
+    height:35rem;
+    width:60rem;
+    margin: 0 auto;
+}
+
+#page-we h1{
+    text-align:center;
+    padding-top:6rem;
+    padding-bottom:5rem;
+}
+
+#sealious-team{
+    width:60rem;
+    height:auto;
+    
+}
+
+.sealious-team-member{
+    width:15rem;
+    height:15rem;
+    float:left;
+    text-align:center;
+}
+
+.sealious-team-member img{
+    border-radius:10rem;
+}
+
+.sealious-team-member h2{
+    font-family: 'SourceSansProLight';
+    font-weight:normal;
+    padding-top:0.5rem;
+    padding-bottom:1rem;
+}
+
+.sealious-team-member p{
+    font-size:0.9rem;
+}
+/*--------------------- 6. Page Social --------------------------------*/
+#container5{
+    background-color: white;
+}
+
+#page-social{
+    height:20rem;
+    width:60rem;
+    margin: 0 auto;
+    color: #29303F;
+    text-align:center;
+}
+
+#page-social h1{
+    width:100%;
+    padding-top:6rem;
+}
+
+#page-social i{
+    margin:2rem;
+    color:#29303F;
+}
+/*--------------------- 7. Footer -------------------------------------*/
+#container6{
+    background-color: white;
+}
+
+footer{
+    height:5rem;
+    width:60rem;
+    margin:0 auto;
+    color: #29303F;
+}
+
+footer span{
+    float:left;
+    margin-left:1rem;
+    padding-top:1rem;
+}
+
+footer a {
+    float: right;
+    padding: 1rem 1rem;
+    text-decoration:none;
+}
+
+footer a:link, footer a:active,footer a:visited{
+    color:#29303F;
+}
+
+footer a:hover{
+    background: #29303F;
+    color:white;
+}
+
+
+
