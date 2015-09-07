@@ -33,14 +33,3 @@
         url('fonts/otf/inconsolata.eot') format('embedded-opentype');
 }
 
-@font-face {
-    font-family: 'nerislight';
-    src: url('fonts/eot/Neris-Light-webfont.eot') format('embedded-opentype'),
-         url('fonts/woff/Neris-Light-webfont.woff') format('woff'),
-         url('fonts/ttf/Neris-Light-webfont.ttf') format('truetype'),
-         url('fonts/otf/Neris-Light.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-

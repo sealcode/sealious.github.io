@@ -43,6 +43,7 @@ h1{
 }
 /*----------------- 1. Navigation ------------------------------------*/
 #navigation {
+
     position:fixed;
     z-index:1;
     width: 100%;
@@ -76,7 +77,7 @@ h1{
 }
 
 #navigation-logo-text {
-    font-family: 'nerislight';
+    font-family: 'Neris';
     font-size:1rem;
     padding-top:1.3rem;
     padding-left:0.2rem;
@@ -177,6 +178,7 @@ h1{
 }
 
 #page-why{
+
     height:67rem;
     width:48rem;
     color:#29303F;
@@ -194,7 +196,6 @@ h1{
 #sealious-advantages{
     width:48rem;
     height:auto;
-    background-color:blue;
 }
 
 .sealious-advantage-image {
@@ -283,8 +284,8 @@ h1{
     background-color: #7c94a1;
 }
 #page-we{
-    height:35rem;
-    width:60rem;
+    max-width:60rem;
+    min-height:35rem;
     margin: 0 auto;
 }
 
@@ -293,18 +294,24 @@ h1{
     padding-top:6rem;
     padding-bottom:5rem;
 }
-
-#sealious-team{
-    width:60rem;
-    height:auto;
-    
+#sealious-team {
+    max-width:60rem;
+    padding-bottom:3rem;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .sealious-team-member{
     width:15rem;
     height:15rem;
-    float:left;
     text-align:center;
+    margin-top:1rem;
+    margin-bottom:1rem;
+
 }
 
 .sealious-team-member img{
@@ -314,8 +321,8 @@ h1{
 .sealious-team-member h2{
     font-family: 'SourceSansProLight';
     font-weight:normal;
-    padding-top:0.5rem;
-    padding-bottom:1rem;
+    padding-top:0.2rem;
+    padding-bottom:0.5rem;
 }
 
 .sealious-team-member p{
@@ -328,7 +335,7 @@ h1{
 
 #page-social{
     height:20rem;
-    width:60rem;
+    max-width:25rem;
     margin: 0 auto;
     color: #29303F;
     text-align:center;
@@ -349,20 +356,26 @@ h1{
 }
 
 footer{
-    height:5rem;
-    width:60rem;
+    height:3rem;
+    max-width:60rem;
     margin:0 auto;
+    margin-bottom:3rem;
     color: #29303F;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 footer span{
-    float:left;
     margin-left:1rem;
     padding-top:1rem;
+    padding-right:1rem;
 }
 
 footer a {
-    float: right;
     padding: 1rem 1rem;
     text-decoration:none;
 }
