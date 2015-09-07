@@ -3,6 +3,7 @@ var fetcher = new function() {
     var minor_tag_list = [];
     var error = "<h4>No documentation for the selected version</h4>";
     var self = this;
+    var responseText = "";
 
     marked.setOptions({
         highlight: function(code) {
@@ -16,10 +17,11 @@ var fetcher = new function() {
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) { //ready
                 callback(request.responseText);
-                view.createTableOfContents();
+                responseText = request.responseText;
+                // view.createTableOfContents();
             } else {
                 view.injectContentToHtml(error);
-                view.createTableOfContents();
+                // view.createTableOfContents();
             }
         };
         request.open("GET", data, true);
@@ -71,6 +73,10 @@ var fetcher = new function() {
         var selected_version = document.getElementById("docs-version").value;
         var link = url_to_choosen_documentation + selected_version + "/docs/reference.md";
         self.getDocumentation(link);
+    };
+
+    this.returnResponseText = function() {
+        return responseText;
     };
 
 };

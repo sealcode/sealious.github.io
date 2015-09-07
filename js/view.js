@@ -31,9 +31,43 @@ var view = new function() {
         fetcher.getSelectedDocs();
     };
 
-    this.createTableOfContents = function () {
-        $(function(){ 
-            $("#toc").tableOfContents(); 
+    this.createTableOfContents = function() {
+        var toc = [];
+        var renderer = (function() {
+            var renderer = new marked.Renderer();
+            renderer.heading = function(text, level, raw) {
+                if (level < 4) {
+                    var anchor = this.options.headerPrefix + raw.toLowerCase().replace(/[^\w]+/g, '-');
+                    toc.push({
+                        anchor: anchor,
+                        level: level,
+                        text: text
+                    });
+                    return '<h' + level + ' id="' + anchor + '">' + text + '</h' + level + '>\n' + '<a href="#table-of-contents">Table of Contents<a>\n';
+                };
+            };
+            return renderer;
+        })();
+
+        marked.setOptions({
+            renderer: renderer,
+            gfm: true,
+            tables: true,
+            breaks: false,
+            pedantic: false,
+            sanitize: true,
+            smartLists: true,
+            smartypants: false
         });
+        var response = fetcher.returnResponseText();
+        var html = marked(response);
+
+        var tocHTML = '<h1 id="table-of-contents">Table of Contents</h1>\n<ul>';
+        toc.forEach(function(entry) {
+            tocHTML += '<li style="padding-left: ' + entry.level / 2 + 'rem"><a href="#' + entry.anchor + '">' + entry.text + '<a></li>\n';
+        });
+        tocHTML += '</ul>\n';
+        document.querySelector('#toc').innerHTML = tocHTML;
+        tocId = document.querySelector('#toc');
     };
 };
