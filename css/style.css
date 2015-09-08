@@ -48,29 +48,38 @@ h1{
     width: 100%;
     color: #29303F;
     background-color:white;
-    height:4rem;
+    min-height:4rem;
     border-bottom: 0.1rem solid #29303F;  
+    padding-top:1.3rem;
 }
 
 #navigation-special-width {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
     max-width:60rem;
     margin: 0 auto;
-}
-
-#navigation ul {
-    float: right;
-    margin-top:1.3rem;
-    margin-right:5rem;
 }
 
 #navigation ul li{
     list-style: none;
     display: inline;
 }
+#navigation li{
+        text-align:center;
+}
+
+#navigation ul a:last-child {
+    margin-right:5rem;
+}
 
 #navigation-logo{
-    margin-top:1rem;
+    margin-top:-0.3rem;
     margin-left:5rem;
+    margin-bottom:1rem;
     height:2rem;
     float:left;
 }
@@ -101,7 +110,7 @@ h1{
 
 /*--------------------- 2. Page Start --------------------------------*/
 #page-start{
-    height:30rem;
+    min-height:30rem;
     width: 100%;
     background-image:
         linear-gradient(
@@ -177,8 +186,8 @@ h1{
 }
 
 #page-why{
-    height:67rem;
-    width:48rem;
+    min-height:67rem;
+    max-width:48rem;
     color:#29303F;
     margin:0 auto;
 }
@@ -189,18 +198,23 @@ h1{
    text-align:center;
    padding-top:6rem;
    padding-bottom:4rem;
+   width:100%;
 }
 
 #sealious-advantages{
-    width:48rem;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    max-width:47rem;
     height:auto;
 }
 
 .sealious-advantage-image {
-    float:left;
-    width:12rem;
+    max-width:12rem;
     height:10rem;
-    margin: 1.5rem 0;
 }
 
 .sealious-advantage-image img{
@@ -208,10 +222,9 @@ h1{
 }
 
 .sealious-advantage-definition{
-    width:36rem;
-    height:10rem;
-    float:left;
-    margin: 1.5rem 0;
+    max-width:35rem;
+    min-height:10rem;
+    padding:0 2rem;
     text-align:center;
 }
 
@@ -221,40 +234,34 @@ h1{
     padding:0.7rem 0rem;
 }
 
-.sealious-advantage-definition:nth-child(odd){
-    padding-right:2rem;
-}
-
 /*--------------------- 4. Page Code ----------------------------------*/
 #container3{
     background-color:#394359;
 }
 
 #page-code{
-    height:45rem;
-    width:60rem;
+    min-height:55rem;
+    max-width:60rem;
     margin:0 auto;
+
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
-#page-code h1{
-    font-family: 'SourceSansProLight';
-    font-weight:normal;
-    text-align:center;
-    padding-top:6rem;
-    padding-bottom:6rem;
-}
 
 #sealious-code-place{
-    width:40rem;
-    height:26rem;
-    float:left;
+    max-width:50rem;
+    min-height:26rem;
+    margin:0 2rem;
 }
 
 #sealious-code-definition{
-    width:20rem;
-    height:26rem;
-    float:left;
-    text-align: justify;
+    padding-top:6rem;
+    text-align: center;
 }
 
 #sealious-code-definition p{
@@ -266,15 +273,12 @@ h1{
 }
 
 #sealious-code-place-folder{
-    width:35rem;
+    max-width:50rem;
     height:24rem;
     background-color: #F5FFFA;
     border-radius: 0.3rem;
     margin:1rem auto;
-}
-
-#sealious-code-place-folder p{
-    width:100%;
+    color: #29303F;
 }
 
 /*--------------------- 5. Page We ------------------------------------*/
@@ -292,7 +296,6 @@ h1{
     padding-top:6rem;
     padding-bottom:5rem;
 }
-
 #sealious-team {
     max-width:60rem;
     padding-bottom:3rem;
@@ -310,6 +313,7 @@ h1{
     text-align:center;
     margin-top:1rem;
     margin-bottom:1rem;
+
 }
 
 .sealious-team-member img{
@@ -386,3 +390,6 @@ footer a:hover{
     background: #29303F;
     color:white;
 }
+
+
+
