@@ -7,10 +7,17 @@ var view = new function() {
         document.getElementById('fetcher-output').innerHTML = output;
     };
 
-    this.parseMarkdownToHtml = function(response) {
-        var parsed_markdown = marked(response);
+    this.parseMarkdownToHtml = function(markdown) {
+        marked.setOptions({
+            highlight: function(code) {
+                return hljs.highlightAuto(code).value;
+            }
+        });
+
+        var parsed_markdown = marked(markdown);
         output = parsed_markdown;
         self.injectContentToHtml(output);
+
     };
 
     this.createSelectDiv = function() {
@@ -31,7 +38,7 @@ var view = new function() {
         fetcher.getSelectedDocs();
     };
 
-    this.createTableOfContents = function() {
+    this.createTableOfContents = function(markdown) {
         var toc = [];
         var renderer = (function() {
             var renderer = new marked.Renderer();
@@ -59,8 +66,8 @@ var view = new function() {
             smartLists: true,
             smartypants: false
         });
-        var response = fetcher.returnResponseText();
-        var html = marked(response);
+
+        var html = marked(markdown);
 
         var tocHTML = '<h1 id="table-of-contents">Table of Contents</h1>\n<ul>';
         toc.forEach(function(entry) {
@@ -68,6 +75,5 @@ var view = new function() {
         });
         tocHTML += '</ul>\n';
         document.querySelector('#toc').innerHTML = tocHTML;
-        tocId = document.querySelector('#toc');
     };
 };

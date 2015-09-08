@@ -3,25 +3,15 @@ var fetcher = new function() {
     var minor_tag_list = [];
     var error = "<h4>No documentation for the selected version</h4>";
     var self = this;
-    var responseText = "";
-
-    marked.setOptions({
-        highlight: function(code) {
-            return hljs.highlightAuto(code).value;
-        }
-    });
 
     this.getData = function(callback, data) {
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function() {
-            if (request.readyState == 4 && request.status == 200) { //ready
+            if (request.readyState === 4 && request.status === 200) { //ready
                 callback(request.responseText);
-                responseText = request.responseText;
-                // view.createTableOfContents();
             } else {
                 view.injectContentToHtml(error);
-                // view.createTableOfContents();
             }
         };
         request.open("GET", data, true);
@@ -29,7 +19,10 @@ var fetcher = new function() {
     };
 
     this.getDocumentation = function(link) {
-        self.getData(view.parseMarkdownToHtml, link);
+        self.getData(function(markdown){
+            view.parseMarkdownToHtml(markdown);
+            view.createTableOfContents(markdown);
+        }, link);
     };
 
     this.getTags = function() {
@@ -74,11 +67,6 @@ var fetcher = new function() {
         var link = url_to_choosen_documentation + selected_version + "/docs/reference.md";
         self.getDocumentation(link);
     };
-
-    this.returnResponseText = function() {
-        return responseText;
-    };
-
 };
 //init page
 fetcher.getTags();
