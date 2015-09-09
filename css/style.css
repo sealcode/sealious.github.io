@@ -48,9 +48,21 @@ h1{
     width: 100%;
     color: #29303F;
     background-color:white;
-    min-height:4rem;
-    border-bottom: 0.1rem solid #29303F;  
+    height:4rem;
+    overflow:hidden;
+    border-bottom: 0.1rem solid #e2e7e9;  
     padding-top:1.3rem;
+
+    -webkit-transition: height 1s; /* Safari */
+    transition: height 1s;
+}
+#mobile-button-menu{
+    margin-top:-0.5rem;
+    margin-right:2rem;
+    padding:0.5rem 1rem;
+    height:2.5rem;
+
+    cursor:pointer;
 }
 
 #navigation-special-width {
@@ -346,11 +358,32 @@ h1{
 #page-social h1{
     width:100%;
     padding-top:6rem;
+    padding-bottom:3rem;
 }
-
+#page-social a{
+    margin-top:5rem;
+    text-decoration:none;
+}
 #page-social i{
-    margin:2rem;
     color:#29303F;
+}
+.demo-icon1 {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    font-size : 3rem;
+    margin:2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+}
+.demo-icon2 {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    font-size : 2.5rem;
+    margin:2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
 }
 /*--------------------- 7. Footer -------------------------------------*/
 #container6{
@@ -372,12 +405,15 @@ footer{
 }
 
 footer span{
+    -webkit-order:2;
+    order:2;
     margin-left:1rem;
     padding-top:1rem;
     padding-right:1rem;
 }
 
 footer a {
+   
     padding: 1rem 1rem;
     text-decoration:none;
 }

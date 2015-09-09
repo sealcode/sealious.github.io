@@ -10,16 +10,20 @@
     <link href="css/fonts.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <!-- statycznie link z ikonami nie wchodzi nwm czemu-->
+    <link rel="stylesheet" href="css/icons.css">
+    <script src="js/responsive-nav.js"></script>
+
+    
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"> statycznie link z ikonami nie wchodzi nwm czemu-->
 </head>
 
-<body>
+<body onresize="hide()">
     <nav id="navigation">
         <div id="navigation-special-width">
             <a id="sealious-logo-link" href="">
                 <img id="navigation-logo" src="img/logo/logo_sealious.svg" alt="Sealious small logo">
             </a>
+            <span id="mobile-button-menu" onclick="show()">Menu</span>
             <ul>
                 <a href="" class="navigation-links">
                     <li>Documentation</li>
@@ -141,8 +145,10 @@
     <div id="container5">
         <div id="page-social">
             <h1>Find Sealious on the Web</h1>
-            <a href="#"><i class="fa fa-github-square fa-4x"></i></a>
-            <a href="#"><i class="fa fa-twitter-square fa-4x"></i></a>
+            <a href="#"><i class="demo-icon1 icon-github-circled">&#xe800;</i></a>
+            <a href="#"><i class="demo-icon2 icon-twitter">&#xe803;</i></a>
+           
+            
         </div>
     </div>
     <div id="container6">
@@ -153,6 +159,6 @@
             <a href="">GitHub</a>
             <a href="">npm</a>
         </footer>
-    </div>  
+    </div>
 </body>
 </html>

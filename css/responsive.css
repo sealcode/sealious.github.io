@@ -1,16 +1,32 @@
+@media all and (min-width: 46em) {
+    #mobile-button-menu{
+        display:none;
+    }  
+    #navigation{
+        height:4rem;
+    }
+}
+
+
 @media all and (max-width: 46em) {
     .navigation-links{
     	width:100%;
     	float:left;
     	text-align:center;
     }
-    #navigation ul{
-    	border-top: 0.1rem solid #29303F;
-    	width:100%;
+    #mobile-button-menu{
+        display:inline;
+    }   
+
+    #navigation ul a{
+        border-top: 0.1rem solid #e2e7e9;
+        width:100%;
+        padding-top:2rem;
+        padding-bottom:2rem;
     }
     #page-start{
-    	padding-top:8rem;
-    	height:40rem;
+
+    	height:30rem;
     }
 
     #sealious-avd-1 {
@@ -63,6 +79,14 @@
         -webkit-order:7;
         margin-bottom:-3rem;
     }
-
+    footer span{
+        padding-bottom:1.5rem;
+    }
+    footer a{
+        -webkit-order:1;
+        order:1;
+        width:100%;
+        text-align:center;
+    }
 
 } 
