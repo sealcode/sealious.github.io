@@ -2,9 +2,14 @@ var view = new function() {
 
     var output = "";
     var self = this;
+    var seal_spinner = '<img class="animated seal" id="page-start-logo" src="img/logo/sealious_icon.svg" alt="Sealious logo">';
 
     this.injectContentToHtml = function(output) {
-        document.getElementById('fetcher-output').innerHTML = output;
+        if (output !== undefined) {
+            document.querySelector('#fetcher-output').innerHTML = output;
+        } else {
+            document.querySelector('#fetcher-output').innerHTML = seal_spinner;
+        }
     };
 
     this.parseMarkdownToHtml = function(markdown) {

@@ -1,7 +1,6 @@
 var fetcher = new function() {
 
     var minor_tag_list = [];
-    var error = "<h4>No documentation for the selected version</h4>";
     var self = this;
 
     this.getData = function(callback, data) {
@@ -10,8 +9,6 @@ var fetcher = new function() {
         request.onreadystatechange = function() {
             if (request.readyState === 4 && request.status === 200) { //ready
                 callback(request.responseText);
-            } else {
-                view.injectContentToHtml(error);
             }
         };
         request.open("GET", data, true);
@@ -26,6 +23,7 @@ var fetcher = new function() {
     };
 
     this.getTags = function() {
+        view.injectContentToHtml();
         var url_to_tags = "https://api.github.com/repos/Sealious/Sealious/tags";
 
         self.getData(function(response) {
