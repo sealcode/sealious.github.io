@@ -19,8 +19,13 @@
 
 #main{
     height: 100%;
-    padding-left: 14rem;
-    max-width: 60rem;
+    margin-left: 14rem;
+    max-width: 210mm;
+    width: 100%;
+}
+
+.content{
+    max-width: none;
 }
 
 select{
@@ -53,13 +58,12 @@ select{
 }
 
 #page-start h1{
-    padding-bottom: 0;
     font-size: 1.4rem;
     float: left;
     vertical-align: middle;
+    padding-left: 1rem;
     padding-top: 1.3rem;
     padding-bottom: 1.3rem;
-    padding-left: 1rem;
 }
 
 
