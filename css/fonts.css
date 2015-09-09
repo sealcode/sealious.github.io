@@ -33,3 +33,13 @@
         url('fonts/otf/inconsolata.eot') format('embedded-opentype');
 }
 
+@font-face {
+      font-family: 'fontello';
+      src: url('./fonts/fontello/fontello.eot?47005677');
+      src: url('./fonts/fontello/fontello.eot?47005677#iefix') format('embedded-opentype'),
+           url('./fonts/fontello/fontello.woff?47005677') format('woff'),
+           url('./fonts/fontello/fontello.ttf?47005677') format('truetype'),
+           url('./fonts/fontello/fontello.svg?47005677#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
