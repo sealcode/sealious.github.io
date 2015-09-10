@@ -60,7 +60,7 @@ h1{
 }
 #mobile-button-menu{
     margin-top:-0.5rem;
-    margin-right:2rem;
+    margin-right:1rem;
     padding:0.5rem 1rem;
     height:2.5rem;
 
@@ -86,13 +86,8 @@ h1{
         text-align:center;
 }
 
-#navigation ul a:last-child {
-    margin-right:5rem;
-}
-
 #navigation-logo{
     margin-top:-0.3rem;
-    margin-left:5rem;
     margin-bottom:1rem;
     height:2rem;
     float:left;
@@ -148,7 +143,7 @@ h1{
 }
 
 #page-start h1{
-    padding-bottom:3rem;
+    padding-bottom:1rem;
 }
 
 #blink {
@@ -200,7 +195,7 @@ h1{
 }
 
 #page-why{
-    min-height:67rem;
+    min-height:57rem;
     max-width:48rem;
     color:#29303F;
     margin:0 auto;
@@ -227,7 +222,7 @@ h1{
 }
 
 .sealious-advantage-image {
-    max-width:12rem;
+    max-width:10rem;
     height:10rem;
 }
 
@@ -236,7 +231,7 @@ h1{
 }
 
 .sealious-advantage-definition{
-    max-width:35rem;
+    max-width:34rem;
     min-height:10rem;
     padding:0 2rem;
     text-align:center;
@@ -254,10 +249,10 @@ h1{
 }
 
 #page-code{
-    min-height:55rem;
+    min-height:40rem;
     max-width:60rem;
     margin:0 auto;
-
+    padding-bottom:4rem;
     display: -webkit-flex; /* Safari */
     -webkit-flex-wrap: wrap; /* Safari 6.1+ */
     display: flex;
@@ -269,30 +264,34 @@ h1{
 
 #sealious-code-place{
     max-width:50rem;
-    min-height:26rem;
+    min-height:18rem;
     margin:0 2rem;
+    overflow:scroll;
+    border-radius: 0.3rem;
+    background-color: #F5FFFA;
 }
 
 #sealious-code-definition{
-    padding-top:6rem;
+    padding-top:2rem;
+    padding-bottom:4rem;
     text-align: center;
 }
 
 #sealious-code-definition p{
-    padding:0rem 2rem;
+    padding:0rem 1rem;
 }
 
 #sealious-code-definition h1{
-    padding:2rem 0rem;
+    padding:2rem 2rem;
 }
 
 #sealious-code-place-folder{
     max-width:50rem;
-    height:24rem;
-    background-color: #F5FFFA;
-    border-radius: 0.3rem;
-    margin:1rem auto;
+    min-width:40rem;
+    min-height:18rem;
+    margin:1rem;
     color: #29303F;
+    overflow:scroll;
 }
 
 /*--------------------- 5. Page We ------------------------------------*/
@@ -307,8 +306,8 @@ h1{
 
 #page-we h1{
     text-align:center;
-    padding-top:6rem;
-    padding-bottom:5rem;
+
+    padding: 6rem 1rem 5rem 1rem;
 }
 #sealious-team {
     max-width:60rem;
