@@ -17,10 +17,23 @@
     left: 0;
 }
 
+#sidebar img {
+    height: 2.5rem;
+}
+
+#sidebar .docs-logo{
+    color: #394359
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+
+#logo{
+}
+
 #main {
     height: 100%;
     margin-left: 14rem;
-    max-width: 210mm;
+    max-width: 50rem;
     width: 100%;
 }
 
@@ -29,43 +42,13 @@
 }
 
 select {
+    margin-top: 2rem;
     background-color: #FFF;
     border: none;
     color: rgb(51, 51, 51) !important;
     font-weight: 300;
 }
 
-#page-start {
-    min-height: 4rem;
-    height: 4rem;
-    width: 100%;
-    background-color: #FFF;
-    background-image: none;
-    /*    background-image:
-        linear-gradient(
-        to top left,
-        #4D394B, #29303F
-        );*/
-    text-align: center;
-    border-bottom: 0.1rem solid #e2e7e9;
-}
-
-#page-start img {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 0rem;
-    height: 2rem;
-    float: left;
-}
-
-#page-start h1 {
-    font-size: 1.4rem;
-    float: left;
-    vertical-align: middle;
-    padding-left: 1rem;
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
-}
 
 .animated {
     -webkit-animation-duration: 8s;
@@ -112,13 +95,33 @@ select {
     animation-name: seal;
 }
 
-@media all and (min-width: 60.75rem) and (max-width: 68.75rem) {}
+@media all and (min-width: 60.75rem) and (max-width: 68.75rem) {
+
+}
 
 @media all and (max-width: 60.75rem) {}
 
 @media all and (max-width: 48rem) {}
 
-@media all and (max-width: 40rem) {}
+@media all and (max-width: 40rem) {
+    #sidebar{
+        width: 100%;
+        position: relative;
+        height: auto;
+        display: block;
+        float: none;
+    }
+
+    #main{
+        margin-left: 0;
+        margin-top: 1rem;
+        display: block;
+    }
+
+    #logo{
+        text-align: center;
+    }
+}
 
 @media all and (max-width: 33.75rem) {}
 
