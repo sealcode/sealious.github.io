@@ -121,6 +121,7 @@ select {
         display: block;
         float: none;
         padding-bottom: 2rem;
+        border: 0;
     }
 
     #main{
