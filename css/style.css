@@ -44,6 +44,8 @@ h1{
 /*----------------- 1. Navigation ------------------------------------*/
 #navigation {
     position:fixed;
+    top:0rem;
+    left:0rem;
     z-index:1;
     width: 100%;
     color: #29303F;
@@ -405,8 +407,6 @@ footer{
 }
 
 footer span{
-    -webkit-order:2;
-    order:2;
     margin-left:1rem;
     padding-top:1rem;
     padding-right:1rem;
