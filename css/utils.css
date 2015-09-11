@@ -10,18 +10,37 @@
     width: 14rem;
     float: left;
     padding: 1rem;
+    padding-top: 1.3rem;
     position: fixed;
     display: inline-block;
-    border-right: 0.1rem solid #e2e7e9;
     top: 1;
     left: 0;
+    background-image: linear-gradient( to top left, #4D394B, #29303F );
+    border-right: 0.2rem solid #E9F0F5;
+}
+
+#sidebar a, h1, #select-div{
+    color: #FFF;
+}
+
+#sidebar img {
+    height: 2.5rem;
+}
+
+#sidebar .docs-logo{
+    color: #394359
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+
+#logo{
 }
 
 #main {
     height: 100%;
     margin-left: 14rem;
-    max-width: 210mm;
-    width: 100%;
+    max-width: 50rem;
+    width: auto;
 }
 
 .content {
@@ -29,42 +48,14 @@
 }
 
 select {
-    background-color: #FFF;
+    margin-top: 2rem;
+    /*background-color: #FFF;*/
+    /*background-color: #303E49;*/
+    background-color: transparent;;
+    color: #FFF;
     border: none;
-    color: rgb(51, 51, 51) !important;
+    /*color: rgb(51, 51, 51) !important;*/
     font-weight: 300;
-}
-
-#page-start {
-    min-height: 4rem;
-    height: 4rem;
-    width: 100%;
-    background-color: #FFF;
-    background-image: none;
-    /*    background-image:
-        linear-gradient(
-        to top left,
-        #4D394B, #29303F
-        );*/
-    text-align: center;
-    border-bottom: 0.1rem solid #e2e7e9;
-}
-
-#page-start img {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 0rem;
-    height: 2rem;
-    float: left;
-}
-
-#page-start h1 {
-    font-size: 1.4rem;
-    float: left;
-    vertical-align: middle;
-    padding-left: 1rem;
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
 }
 
 .animated {
@@ -106,19 +97,82 @@ select {
  
 .seal {
     position: absolute;
-    top: 50%;
+    top: 2.3rem;
     left: 16rem;
     -webkit-animation-name: seal;
     animation-name: seal;
 }
 
-@media all and (min-width: 60.75rem) and (max-width: 68.75rem) {}
+@media all and (min-width: 60.75rem) and (max-width: 68.75rem) {
 
-@media all and (max-width: 60.75rem) {}
+}
 
-@media all and (max-width: 48rem) {}
+@media all and (max-width: 60.75rem) {
+}
 
-@media all and (max-width: 40rem) {}
+@media all and (max-width: 48rem) {
+}
+
+@media all and (max-width: 40rem) {
+    #sidebar{
+        width: 100%;
+        position: relative;
+        height: auto;
+        display: block;
+        float: none;
+        padding-bottom: 2rem;
+        border: 0;
+    }
+
+    #main{
+        margin-left: 0;
+        margin-top: 1rem;
+        display: block;
+    }
+
+    #logo{
+        text-align: center;
+    }
+
+    .content{
+        padding-top: 0;
+    }
+
+    .seal{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    @-webkit-keyframes seal {
+        0% {-webkit-transform: translateX(0rem);}
+        10% {-webkit-transform: translateX(25%);}
+        20% {-webkit-transform: translateX(50%);}
+        30% {-webkit-transform: translateX(75%);}
+        40% {-webkit-transform: translateX(100%);}
+        50% {-webkit-transform: translateX(125%) rotateY(180deg);}
+        60% {-webkit-transform: translateX(100%) rotateY(180deg);}
+        70% {-webkit-transform: translateX(75%) rotateY(180deg);}
+        80% {-webkit-transform: translateX(50%) rotateY(180deg);}
+        90% {-webkit-transform: translateX(25%) rotateY(180deg);}
+        100% {-webkit-transform: translateX(0%) rotateY(360deg);}
+    } 
+     
+    @keyframes seal {
+        0% {transform: translateX(0rem);}
+        10% {transform: translateX(25%);}
+        20% {transform: translateX(50%);}
+        30% {transform: translateX(75%);}
+        40% {transform: translateX(100%);}
+        50% {transform: translateX(125%) rotateY(180deg);}
+        60% {transform: translateX(100%) rotateY(180deg);}
+        70% {transform: translateX(75%) rotateY(180deg);}
+        80% {transform: translateX(50%) rotateY(180deg);}
+        90% {transform: translateX(25%) rotateY(180deg);}
+        100% {transform: translateX(0%) rotateY(360deg);}
+    } 
+     
+}
 
 @media all and (max-width: 33.75rem) {}
 

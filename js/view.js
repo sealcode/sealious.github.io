@@ -2,7 +2,7 @@ var view = new function() {
 
     var output = "";
     var self = this;
-    var seal_spinner = '<img class="animated seal" id="page-start-logo" src="img/logo/sealious_icon.svg" alt="Sealious logo">';
+    var seal_spinner = '<img class="animated seal" id="loading-seal" src="img/logo/sealious_icon.svg" alt="Sealious logo">';
 
     this.injectContentToHtml = function(output) {
         if (output !== undefined) {
