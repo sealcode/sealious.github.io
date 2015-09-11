@@ -182,4 +182,13 @@ select {
 
 @media all and (max-width: 20rem) {}
 
-@media all and (max-height: 38.75rem) {}
+@media all and (max-height: 32rem) {
+    #sidebar{
+        width: 15rem;
+        overflow-y: scroll;
+    }
+
+    #main{
+        margin-left: 15rem;
+    }
+}

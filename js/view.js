@@ -74,7 +74,7 @@ var view = new function() {
 
         var html = marked(markdown);
 
-        var tocHTML = '<h1 id="table-of-contents">Table of Contents</h1>\n<ul>';
+        var tocHTML = '\n<ul>';
         toc.forEach(function(entry) {
             tocHTML += '<li style="padding-left: ' + entry.level / 2 + 'rem"><a href="#' + entry.anchor + '">' + entry.text + '<a></li>\n';
         });
