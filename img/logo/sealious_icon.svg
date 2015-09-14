@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="110.36323"
+   height="89.097443"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="logo_sealious.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3962">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3964" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3966" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3962"
+       id="linearGradient3970"
+       x1="695.30212"
+       y1="-725.88995"
+       x2="984.98114"
+       y2="-725.88995"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994948"
+     inkscape:cx="361.20052"
+     inkscape:cy="-105.66066"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="749"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1620.238,487.54535)">
+    <path
+       style="fill:#4d394b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 1718.9352,-465.04305 c -17.4785,38.80745 5.0602,42.24185 0.7988,66.03844 -28.6926,-35.52209 -17.7746,-7.7056 -44.5292,-12.6362 -12.4288,-1.8239 -28.1051,-3.2986 -34.4242,-3.758 -6.3191,-0.4593 -11.1901,0.6438 -18.2848,16.9509 -2.3931,-5.1133 -4.9005,-18.1657 3.9625,-23.23439 -1.0501,-10.8754 2.6332,-16.08355 8.2078,-21.23005 1.4156,7.2566 -0.3296,14.48475 4.0892,17.63055 2.7116,1.9305 11.0751,-0.1884 18.8686,-4.0042 7.7934,-3.8157 19.5072,-16.22005 28.4218,-26.73715 6.3427,-7.4829 11.1681,-14.5467 12.8485,-18.639 4.9601,-14.9751 18.8579,-10.456 29.7358,-12.8832 5.9395,0.774 -2.7904,15.5334 -9.6948,22.5023 z"
+       id="path3044-79-8-1-4-7-9-1-5-7-1-7-8-14-0-8-3-9-4-9-7-84"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccczcccszsccc"
+       inkscape:export-filename="/home/arkadiusz/Desktop/path2996.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>
