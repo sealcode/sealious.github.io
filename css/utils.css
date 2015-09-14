@@ -17,6 +17,7 @@
     left: 0;
     background-image: linear-gradient( to top left, #4D394B, #29303F );
     border-right: 0.2rem solid #E9F0F5;
+    overflow-y: auto;
 }
 
 #sidebar a, h1, #select-div{
@@ -49,12 +50,9 @@
 
 select {
     margin-top: 2rem;
-    /*background-color: #FFF;*/
-    /*background-color: #303E49;*/
     background-color: transparent;;
     color: #FFF;
     border: none;
-    /*color: rgb(51, 51, 51) !important;*/
     font-weight: 300;
 }
 
@@ -104,7 +102,6 @@ select {
 }
 
 @media all and (min-width: 60.75rem) and (max-width: 68.75rem) {
-
 }
 
 @media all and (max-width: 60.75rem) {
@@ -182,13 +179,12 @@ select {
 
 @media all and (max-width: 20rem) {}
 
-@media all and (max-height: 32rem) {
-    #sidebar{
+@media all and (max-height: 32rem){
+/*    #sidebar{
         width: 15rem;
-        overflow-y: scroll;
     }
 
     #main{
         margin-left: 15rem;
-    }
+    }*/
 }
