@@ -5,34 +5,68 @@
     #navigation{
         height:4rem;
     }
+    #navigation-logo{
+        margin-left:1rem;
+    }
+    #navigation ul{
+        padding-top:1.3rem;
+        padding-bottom:2rem;
+        border-bottom:none;
+        margin-right:1rem;
+    }
 }
 
 
 @media all and (max-width: 46em) {
+    p{
+        font-size:1.1rem;
+    }
     .navigation-links{
     	width:100%;
     	float:left;
     	text-align:center;
+        padding:1rem 1rem;
+    }
+    #navigation-logo {
+        margin-left:1rem;
     }
     #mobile-button-menu{
         display:inline;
     }   
-
+    #navigation ul{
+        width:100%;
+    }
     #navigation ul a{
         border-top: 0.1rem solid #e2e7e9;
         width:100%;
-        padding-top:2rem;
-        padding-bottom:2rem;
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+    #navigation ul a:last-child{
+        border-bottom: 0.1rem solid #e2e7e9;
     }
     #page-start{
-
     	height:30rem;
+    }
+    #page-start-logo{
+        width:80%;
+    }
+    #page-start h1{
+        font-size:1.4rem;
+    }
+    #page-start h3{
+        font-size:1.1rem;
+    }
+    #sealious-advantages p{
+        text-align:justify;
     }
 
     #sealious-avd-1 {
         order:1;
         -webkit-order:1;
+        margin:0 5rem;
         margin-bottom:-1rem;
+        width:100%;
     }
     #sealious-avd-2 {
         order:2;
@@ -51,13 +85,17 @@
     #sealious-avd-4 {
         order:3;
         -webkit-order:3;
+        margin:0 5rem;
         margin-bottom:-1.5rem;
+        width:100%;
     }
 
     #sealious-avd-5 {
         order:5;
         -webkit-order:5;
+        margin:0 5rem;
         margin-bottom:-1.3rem;
+        width:100%;
     }
 
     #sealious-avd-6 {
@@ -77,10 +115,20 @@
     #sealious-avd-8 {
         order:7;
         -webkit-order:7;
+        margin:0 5rem;
         margin-bottom:-3rem;
+        width:100%;
+    }
+    #sealious-code-definition p{
+        text-align:justify;
+        margin:0 1rem;
     }
     footer span{
+        -webkit-order:2;
+        order:2;
         padding-bottom:1.5rem;
+        width:100%;
+        text-align:center;
     }
     footer a{
         -webkit-order:1;

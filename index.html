@@ -2,39 +2,37 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
     <title>Sealious</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <link href="css/fonts.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/icons.css">
     <script src="js/responsive-nav.js"></script>
 
-    
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"> statycznie link z ikonami nie wchodzi nwm czemu-->
+    <link rel="stylesheet" href="js/highlight/styles/solarized_dark.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body onresize="hide()">
     <nav id="navigation">
         <div id="navigation-special-width">
-            <a id="sealious-logo-link" href="">
+            <a id="sealious-logo-link" href="http://sealious.github.io">
                 <img id="navigation-logo" src="img/logo/logo_sealious.svg" alt="Sealious small logo">
             </a>
             <span id="mobile-button-menu" onclick="show()">Menu</span>
             <ul>
-                <a href="" class="navigation-links">
+                <a href="docs.html" class="navigation-links">
                     <li>Documentation</li>
                 </a>
                 <a href="" class="navigation-links">
                     <li>Learn Sealious</li>
                 </a>
-                <a href="" class="navigation-links">
+                <a href="https://github.com/Sealious" class="navigation-links">
                     <li>GitHub</li>
                 </a>
-                <a href="" class="navigation-links">
+                <a href="https://www.npmjs.com/package/sealious" class="navigation-links">
                     <li>npm</li>
                 </a>
             </ul>
@@ -43,7 +41,6 @@
     <div id="container1">
         <div id="page-start">
             <img id="page-start-logo" src="img/logo/logo_sealious_white.svg" alt="Sealious logo">
-            
             <h1>$ npm install sealious<span id="blink">_</span></h1>
             <h3> Sealious is an application-development framework. It can be used to create a web application, as well as a desktop app</h3>
         </div>
@@ -94,9 +91,22 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris niooris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in rellit anim id est laborum.</p>
             </div>
             <div id="sealious-code-place">
-                <div id="sealious-code-place-folder">
-                    <p>Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code Some Code </p>
-                </div>
+                    <pre>
+                        <code class="lang-js">
+new Sealious.ChipTypes.ResourceType("employee", {
+    fields: [
+        {name: "first-name", type: "text", required: true},
+        {name: "last-name", type: "text", required: false}, 
+        {name: "photo", type: "file", required: true},
+        {name: "is-friends-with", type: "reference", allowed_types:["employee"]}
+    ],
+    access_strategy: {
+        create: "only-admin",
+        retrieve: "public"
+    }
+});
+                    </code>
+                </pre>
             </div>
         </div>
     </div>
@@ -145,19 +155,17 @@
     <div id="container5">
         <div id="page-social">
             <h1>Find Sealious on the Web</h1>
-            <a href="#"><i class="demo-icon1 icon-github-circled">&#xe800;</i></a>
+            <a href="https://github.com/Sealious"><i class="demo-icon1 icon-github-circled">&#xe800;</i></a>
             <a href="#"><i class="demo-icon2 icon-twitter">&#xe803;</i></a>
-           
-            
         </div>
     </div>
     <div id="container6">
         <footer>
             <span class="central">© 2015 Sealious Inc.</span>
-            <a href="">Docs & Help</a>
+            <a href="docs.html">Docs & Help</a>
             <a href="">Learn Sealious</a>
-            <a href="">GitHub</a>
-            <a href="">npm</a>
+            <a href="https://github.com/Sealious">GitHub</a>
+            <a href="https://www.npmjs.com/package/sealious">npm</a>
         </footer>
     </div>
 </body>
