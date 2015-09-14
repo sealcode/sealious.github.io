@@ -14,6 +14,12 @@
         border-bottom:none;
         margin-right:1rem;
     }
+    .sealious-advantage-definition{
+        margin-bottom:3rem;
+    }
+    .sealious-advantage-image{
+        margin-bottom:3rem;
+    }
 }
 
 
@@ -57,9 +63,16 @@
     #page-start h3{
         font-size:1.1rem;
     }
+    .sealious-advantage-image {
+        margin-bottom:0rem;
+    }
+    .sealious-advantage-definition{
+        margin-bottom:1rem;
+    }
     #sealious-advantages p{
         text-align:justify;
     }
+    .sealious-ad
 
     #sealious-avd-1 {
         order:1;

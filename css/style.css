@@ -52,7 +52,7 @@ h1{
     background-color:white;
     height:4rem;
     overflow:hidden;
-    
+    box-shadow:0rem 0rem .2rem rgba(0,0,0,0.3);
     
 
     -webkit-transition: height 1s; /* Safari */
