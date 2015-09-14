@@ -8,6 +8,12 @@
     #navigation-logo{
         margin-left:1rem;
     }
+    #navigation ul{
+        padding-top:1.3rem;
+        padding-bottom:2rem;
+        border-bottom:none;
+        margin-right:1rem;
+    }
 }
 
 
@@ -19,6 +25,7 @@
     	width:100%;
     	float:left;
     	text-align:center;
+        padding:1rem 1rem;
     }
     #navigation-logo {
         margin-left:1rem;
@@ -34,6 +41,9 @@
         width:100%;
         padding-top:1rem;
         padding-bottom:1rem;
+    }
+    #navigation ul a:last-child{
+        border-bottom: 0.1rem solid #e2e7e9;
     }
     #page-start{
     	height:30rem;
