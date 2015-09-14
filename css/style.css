@@ -66,14 +66,20 @@ h1{
     margin-right:1rem;
     cursor:pointer;
     
-    -webkit-transition: background 0.5s;
-    transition: background 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 
 }
 #mobile-button-menu:hover{
     color:white;
     background: #29303F;
 }
+#mobile-button-menu:active,#mobile-button-menu:link, #mobile-button-menu:visited  {
+    color: #29303F;
+    background-color:white;
+}
+
+
 
 #navigation-special-width {
     display: -webkit-flex; /* Safari */
@@ -311,6 +317,7 @@ h1{
 }
 /*--------------------- 5. Page We ------------------------------------*/
 #container4{
+    margin-top:-0.5rem;
     background-image:
         linear-gradient(
         to top,

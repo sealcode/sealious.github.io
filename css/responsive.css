@@ -72,13 +72,10 @@
     #sealious-advantages p{
         text-align:justify;
     }
-    .sealious-ad
-
     #sealious-avd-1 {
         order:1;
         -webkit-order:1;
         margin:0 5rem;
-        margin-bottom:-1rem;
         width:100%;
     }
     #sealious-avd-2 {
