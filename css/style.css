@@ -44,25 +44,35 @@ h1{
 /*----------------- 1. Navigation ------------------------------------*/
 #navigation {
     position:fixed;
-    z-index:1;
+    top:0rem;
+    left:0rem;
+    z-index:2;
     width: 100%;
     color: #29303F;
     background-color:white;
     height:4rem;
     overflow:hidden;
-    border-bottom: 0.1rem solid #e2e7e9;  
-    padding-top:1.3rem;
+    
+    
 
     -webkit-transition: height 1s; /* Safari */
     transition: height 1s;
 }
 #mobile-button-menu{
-    margin-top:-0.5rem;
-    margin-right:2rem;
-    padding:0.5rem 1rem;
-    height:2.5rem;
-
+    padding-top:1.3rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-bottom:1.5rem;
+    margin-right:1rem;
     cursor:pointer;
+    
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+
+}
+#mobile-button-menu:hover{
+    color:white;
+    background: #29303F;
 }
 
 #navigation-special-width {
@@ -75,23 +85,17 @@ h1{
     max-width:60rem;
     margin: 0 auto;
 }
-
 #navigation ul li{
     list-style: none;
     display: inline;
 }
-#navigation li{
-        text-align:center;
-}
 
-#navigation ul a:last-child {
-    margin-right:5rem;
+#navigation li{
+    text-align:center;
 }
 
 #navigation-logo{
-    margin-top:-0.3rem;
-    margin-left:5rem;
-    margin-bottom:1rem;
+    margin-top:1rem;
     height:2rem;
     float:left;
 }
@@ -106,7 +110,13 @@ h1{
 }
 
 .navigation-links{
-    padding:0.5rem 1rem;
+    padding-top:1.3rem;
+    padding-bottom: 1.5rem;
+    padding-left:1rem;
+    padding-right:1rem;
+
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
 }
 
 .navigation-links:visited, .navigation-links:active, .navigation-links:link{
@@ -146,7 +156,7 @@ h1{
 }
 
 #page-start h1{
-    padding-bottom:3rem;
+    padding-bottom:1rem;
 }
 
 #blink {
@@ -193,12 +203,12 @@ h1{
 }
 /*--------------------- 3. Page Why -----------------------------------*/
 #container2{
-    background-color:white;
-    height:auto;
+    background-color:#fcfcfc;
+
 }
 
 #page-why{
-    min-height:67rem;
+    min-height:57rem;
     max-width:48rem;
     color:#29303F;
     margin:0 auto;
@@ -225,7 +235,7 @@ h1{
 }
 
 .sealious-advantage-image {
-    max-width:12rem;
+    max-width:10rem;
     height:10rem;
 }
 
@@ -234,7 +244,7 @@ h1{
 }
 
 .sealious-advantage-definition{
-    max-width:35rem;
+    max-width:34rem;
     min-height:10rem;
     padding:0 2rem;
     text-align:center;
@@ -248,11 +258,16 @@ h1{
 
 /*--------------------- 4. Page Code ----------------------------------*/
 #container3{
-    background-color:#394359;
+    background-image:
+        linear-gradient(
+        to bottom,
+        #4D394B, #29303F
+        );
+
 }
 
 #page-code{
-    min-height:55rem;
+    min-height:35rem;
     max-width:60rem;
     margin:0 auto;
 
@@ -267,35 +282,39 @@ h1{
 
 #sealious-code-place{
     max-width:50rem;
-    min-height:26rem;
-    margin:0 2rem;
+    min-height:5rem;
+    margin-left:1rem;
+    margin-right:1rem;
+    overflow:scroll;
 }
 
 #sealious-code-definition{
-    padding-top:6rem;
+    padding-top:2rem;
+    padding-bottom:4rem;
     text-align: center;
 }
 
 #sealious-code-definition p{
-    padding:0rem 2rem;
+    padding:0rem 1rem;
 }
 
 #sealious-code-definition h1{
-    padding:2rem 0rem;
+    padding:3rem 2rem;
 }
-
-#sealious-code-place-folder{
-    max-width:50rem;
-    height:24rem;
-    background-color: #F5FFFA;
-    border-radius: 0.3rem;
-    margin:1rem auto;
-    color: #29303F;
+#sealious-code-place pre code{
+    padding-left:3rem;
+    padding-right:3rem;
+    padding-top:1rem;
+    padding-bottom:2rem;
 }
-
 /*--------------------- 5. Page We ------------------------------------*/
 #container4{
-    background-color: #7c94a1;
+    background-image:
+        linear-gradient(
+        to top,
+        #4D394B, #29303F
+        );
+    
 }
 #page-we{
     max-width:60rem;
@@ -305,8 +324,8 @@ h1{
 
 #page-we h1{
     text-align:center;
-    padding-top:6rem;
-    padding-bottom:5rem;
+
+    padding: 6rem 1rem 5rem 1rem;
 }
 #sealious-team {
     max-width:60rem;
@@ -344,7 +363,7 @@ h1{
 }
 /*--------------------- 6. Page Social --------------------------------*/
 #container5{
-    background-color: white;
+    background-color: #fcfcfc;
 }
 
 #page-social{
@@ -387,14 +406,15 @@ h1{
 }
 /*--------------------- 7. Footer -------------------------------------*/
 #container6{
-    background-color: white;
+    background-color: #fcfcfc;
+    height:auto;
 }
 
 footer{
-    height:3rem;
+    min-height:4rem;
     max-width:60rem;
     margin:0 auto;
-    margin-bottom:3rem;
+    padding-bottom:1rem;
     color: #29303F;
     display: -webkit-flex; /* Safari */
     -webkit-flex-wrap: wrap; /* Safari 6.1+ */
@@ -405,15 +425,14 @@ footer{
 }
 
 footer span{
-    -webkit-order:2;
-    order:2;
     margin-left:1rem;
     padding-top:1rem;
     padding-right:1rem;
 }
 
 footer a {
-   
+    -webkit-transition: all 1s;
+    transition: all 1s;
     padding: 1rem 1rem;
     text-decoration:none;
 }
@@ -428,4 +447,4 @@ footer a:hover{
 }
 
 
-
+/*----------------------------Linki hover transition -------------*/

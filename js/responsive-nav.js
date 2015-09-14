@@ -1,10 +1,10 @@
 function show(){
-    if(document.querySelector('#navigation').style.height == '25rem') {
+    if(document.querySelector('#navigation').style.height == '17.45rem') {
         document.querySelector('#navigation').style.height= '4rem';
     }
     else
     {
-        document.querySelector('#navigation').style.height= '25rem';
+        document.querySelector('#navigation').style.height= '17.45rem';
     }
 }
 function hide(){
