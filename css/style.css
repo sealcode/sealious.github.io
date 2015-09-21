@@ -55,8 +55,8 @@ h1{
     box-shadow:0rem 0rem .2rem rgba(0,0,0,0.3);
     
 
-    -webkit-transition: height 1s; /* Safari */
-    transition: height 1s;
+    -webkit-transition: height 0.2s; /* Safari */
+    transition: height 0.2s;
 }
 #mobile-button-menu{
     padding-top:1.3rem;
@@ -66,8 +66,8 @@ h1{
     margin-right:1rem;
     cursor:pointer;
     
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 
 }
 #mobile-button-menu:hover{
@@ -121,8 +121,8 @@ h1{
     padding-left:1rem;
     padding-right:1rem;
 
-    -webkit-transition: all 0.7s;
-    transition: all 0.7s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 .navigation-links:visited, .navigation-links:active, .navigation-links:link{
@@ -442,8 +442,8 @@ footer span{
 }
 
 footer a {
-    -webkit-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
     padding: 1rem 1rem;
     text-decoration:none;
 }
