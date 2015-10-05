@@ -98,7 +98,8 @@
 			<div id="sealious-code-place">
 				<pre>
 						<code class="lang-js">
-new Sealious.ChipTypes.ResourceType("employee", {
+new Sealious.ChipTypes.ResourceType({
+	name: "employee",
 	fields: [
 		{name: "first-name", type: "text", required: true},
 		{name: "last-name", type: "text", required: false}, 
