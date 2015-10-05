@@ -247,12 +247,14 @@ h1{
 
 .sealious-advantage-image img{
     padding:1rem;
+    padding-top:0rem;
 }
 
 .sealious-advantage-definition{
     max-width:34rem;
+    width:100%;
     min-height:10rem;
-    padding:0 2rem;
+    padding:1rem 2rem;
     text-align:center;
 }
 
