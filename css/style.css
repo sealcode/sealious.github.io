@@ -210,7 +210,6 @@ h1{
 /*--------------------- 3. Page Why -----------------------------------*/
 #container2{
     background-color:#fcfcfc;
-
 }
 
 #page-why{
@@ -229,7 +228,8 @@ h1{
    width:100%;
 }
 
-#sealious-advantages{
+
+.sealious-advantage{
     display: -webkit-flex; /* Safari */
     -webkit-flex-wrap: wrap; /* Safari 6.1+ */
     display: flex;
@@ -241,29 +241,32 @@ h1{
 }
 
 .sealious-advantage-image {
-    max-width:10rem;
+    width:10rem;
     height:10rem;
+    flex-grow:0;
 }
 
 .sealious-advantage-image img{
     padding:1rem;
-    padding-top:0rem;
+    margin:0 auto;
 }
-
 .sealious-advantage-definition{
-    max-width:34rem;
-    width:100%;
+    max-width:30rem;
     min-height:10rem;
     padding:1rem 2rem;
     text-align:center;
+    flex-grow:1;
 }
 
 .sealious-advantage-definition h2{
     font-family: 'SourceSansProLight';
     font-weight:normal;
-    padding:0.7rem 0rem;
+    padding:1rem 0rem 1rem 0rem;
 }
 
+.sealious-advantage:nth-child(4) .sealious-advantage-definition h2{
+    padding-top:2rem;
+}
 /*--------------------- 4. Page Code ----------------------------------*/
 #container3{
     background-image:
@@ -271,7 +274,6 @@ h1{
         to bottom,
         #4D394B, #29303F
         );
-
 }
 
 #page-code{
@@ -355,13 +357,14 @@ h1{
     text-align:center;
     margin-top:1rem;
     margin-bottom:1rem;
-
 }
 
 .sealious-team-member img{
     width:10rem;
     height:10rem;
     border-radius:10rem;
+        transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
 .sealious-team-member h2{
@@ -371,6 +374,17 @@ h1{
     padding-bottom:0.5rem;
 }
 
+#sealious-team a{
+    text-decoration:none;
+    color:white;
+}
+#sealious-team a:active, #sealious-team a:link, #sealious-team a:visited{
+    text-decoration:none;
+    color:white;
+} 
+#sealious-team a:hover .sealious-team-member img{
+    box-shadow: 0rem 0rem 2rem #14171f;
+}
 .sealious-team-member p{
     font-size:0.9rem;
 }
