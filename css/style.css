@@ -79,11 +79,8 @@ h1{
     background-color:white;
 }
 
-
-
 #navigation-special-width {
     display: -webkit-flex; /* Safari */
-    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
     display: flex;
     flex-wrap: wrap;
     -webkit-justify-content: space-between;
