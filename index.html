@@ -15,24 +15,26 @@
 
 <body onresize="hide()">
 	<nav id="navigation">
-		<div id="navigation-special-width">
-			<a id="sealious-logo-link" href="http://sealious.github.io">
-				<img id="navigation-logo" src="img/logo/logo_sealious.svg" alt="Sealious small logo">
-			</a>
-			<span id="mobile-button-menu" onclick="show()">Menu</span>
-			<ul>
-				<a href="docs.html" class="navigation-links">
-					<li>Documentation</li>
-				</a>
-				<a href="https://github.com/Sealious" class="navigation-links">
-					<li>GitHub</li>
-				</a>
-				<a href="https://www.npmjs.com/package/sealious" class="navigation-links">
-					<li>npm</li>
-				</a>
-			</ul>
-		</div>
-	</nav>
+			<div id="navigation-special-width">
+				<div id="logo-link">
+					<a id="sealious-logo-link" href="http://sealious.github.io">
+						<img id="navigation-logo" alt="Sealious small logo" src="img/logo/logo_sealious.svg" />
+					</a>
+				</div>
+				<span id="mobile-button-menu" onclick="show()">Menu</span>
+				<div id="navigation-links">
+					<a class="navigation-links" href="docs.html">
+						<div>Documentation</div>
+					</a>
+					<a class="navigation-links" href="https://github.com/Sealious">
+						<div>GitHub</div>
+					</a>
+					<a class="navigation-links" href="https://npmjs.com/package/sealious">
+						<div>npm</div>
+					</a>
+				</div>
+			</div>
+		</nav>
 	<div id="container1">
 		<div id="page-start">
 			<img id="page-start-logo" src="img/logo/logo_sealious_white.svg" alt="Sealious logo">
