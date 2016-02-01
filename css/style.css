@@ -237,6 +237,7 @@ h1{
     padding:1rem;
     margin:0 auto;
     overflow:hidden;
+    object: cover-fit;
 }
 .sealious-advantage-definition{
     max-width:30rem;
